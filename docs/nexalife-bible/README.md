@@ -16,14 +16,33 @@ The authoritative specification for NexaLife — an AI-powered Life Operating Sy
 | 07 | Universal Data Platform (UDP) | [NLB-07](./NLB-07-universal-data-platform.md) | Master Draft (v1.0) |
 | 08 | Universal Experience Framework (UXF) | [NLB-08](./NLB-08-universal-experience-framework.md) | Master Draft (v1.0) |
 | 09 | Automation & Workflow Engine (AWE) | [NLB-09](./NLB-09-automation-and-workflow-engine.md) | Master Draft (v1.0) |
-| 10 | Identity, Organizations & Security Framework (IOSF) | — | Planned |
-| 11 | User Personas | — | Planned |
-| 12 | Product Requirements (PRD) | — | Planned |
-| 13 | Analytics & Insight Layer | — | Planned |
-| 14 | Platform Architecture & Infrastructure | — | Planned |
-| 15 | Marketplace & Extensibility | — | Planned |
+| 10 | Identity, Organizations & Security Framework (IOSF) | [NLB-10](./NLB-10-identity-organizations-and-security-framework.md) | Master Draft (v1.0) |
+| 11 | Nexa AI Operating System (NAOS) | [NLB-11](./NLB-11-nexa-ai-operating-system.md) | Master Draft (v1.0) |
+| 12 | Integration & Connected Services Platform (ICSP) | [NLB-12](./NLB-12-integration-and-connected-services-platform.md) | Master Draft (v1.0) |
+| 13 | Marketplace & Extensibility Platform (MEP) | [NLB-13](./NLB-13-marketplace-and-extensibility-platform.md) | Master Draft (v1.0) |
+| 14 | Community, Competitions & Achievement Platform (CCAP) | [NLB-14](./NLB-14-community-competitions-and-achievement-platform.md) | Master Draft (v1.0) |
+| 15 | Master Planner Specification Standard (MPSS) | [NLB-15](./NLB-15-master-planner-specification-standard.md) | Master Draft (v1.1) |
+| 16 | Study Planner Bible (multi-part, series `NLB-SP-001`–`NLB-SP-008`) | [planners/study-planner/](./planners/study-planner/) | **Complete** (8 of 8 parts) |
+| 17–20 | *(retired — see NLB-00 v1.5 note; not reassigned)* | — | Retired |
+| 21 | Life Orchestrator & Universal Planning Engine (LOUPE) | [NLB-21](./NLB-21-life-orchestrator-and-universal-planning-engine.md) | Master Draft (v1.0) |
+| 22 | Nexa Intelligence Core (NIC) (multi-part, series `NLB-NIC-001`+) | [nexa-intelligence-core/](./nexa-intelligence-core/) | In Progress (1 of ~2 parts) |
+| 23 | User Personas | — | Planned |
+| 24 | Product Requirements (PRD) | — | Planned |
+| 25 | Analytics & Insight Layer | — | Planned |
+| 26 | Platform Architecture & Infrastructure | — | Planned |
 
-See `NLB-00` Article VIII for the full roadmap and the rationale behind the current ordering, and Article VII for documentation standards (ID scheme, versioning, status lifecycle, amendment process).
+See `NLB-00` Article VIII for the full roadmap and the rationale behind the current ordering, and Article VII for documentation standards (ID scheme, versioning, status lifecycle, amendment process — including the `NLB-<XX>-NNN` scheme multi-part series use for their own parts).
+
+### Multi-part series
+
+Some volumes are big enough to need their own numbered series rather than a single document. Each still holds just one slot in the roadmap above; their parts are numbered independently under the `NLB-<XX>-NNN` scheme (NLB-00 Article VII).
+
+| Series | Covers | Directory | Parts written |
+| --- | --- | --- | --- |
+| `NLB-SP-*` | The Study Planner — first planner spec'd under the MPSS (NLB-15) | [planners/study-planner/](./planners/study-planner/) | 001–008 (complete) |
+| `NLB-NIC-*` | Nexa Intelligence Core — Nexa's model-agnostic identity, memory, and orchestration architecture, underneath NLB-06 and NLB-11 | [nexa-intelligence-core/](./nexa-intelligence-core/) | 001 Identity, Memory & Orchestration |
+
+Future planner bibles (Finance, Health, Business, and so on) will follow the same pattern under `docs/nexalife-bible/planners/<planner-name>/`, each with its own two-or-three-letter series code.
 
 ## Reading order
 
@@ -31,7 +50,10 @@ See `NLB-00` Article VIII for the full roadmap and the rationale behind the curr
 2. **Strategy** — `NLB-01`, `NLB-02` (why NexaLife, and against what market)
 3. **Structure** — `NLB-03`, `NLB-04` (the 17 Life Domains and the 503-entry planner catalogue)
 4. **Shared engines** — `NLB-05` through `NLB-09` (the five platform layers every planner is built from: Planner, AI, Data, Experience, Automation)
-5. **Everything after** — identity/security, personas, requirements, analytics, infrastructure, and marketplace, in that order, per the Volume 10–15 roadmap above
+5. **Trust & connectivity** — `NLB-10` (identity, organizations, security), `NLB-11` (Nexa's own behavior), `NLB-12` (external integrations)
+6. **Growth & community** — `NLB-13` (Marketplace), `NLB-14` (Community, Competitions & Achievement)
+7. **The authoring standard** — `NLB-15` (MPSS): the template every individual planner spec, starting with the Study Planner Bible at 16–23, must follow
+8. **Everything after** — personas, requirements, analytics, and infrastructure, per the Volume 24–27 roadmap above
 
 ## Amending a volume
 

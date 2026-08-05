@@ -5,7 +5,7 @@
 | Field | Value |
 | --- | --- |
 | Document ID | NLB-00 |
-| Version | 1.1 |
+| Version | 1.6 |
 | Status | Master Draft |
 | Priority | ★★★★★ (Critical) |
 | Supersedes | — |
@@ -120,6 +120,9 @@ Catalogue entries inside a volume carry their own IDs:
 | `LD-NN` | Life Domain | `LD-06` (Health) |
 | `PU-NN-NNN` | Planner Universe entry | `PU-06-012` |
 | `AI-NN-NNN` | AI specialist | `AI-06-003` |
+| `NLB-<XX>-NNN` | Individual planner bible, part N | `NLB-SP-002` (Study Planner, Part 2) |
+
+Individual planner bibles (written under the Master Planner Specification Standard, NLB-15) do not consume sequential top-level volume numbers one part at a time. Each planner gets its own two-or-three-letter code (`SP` for Study Planner; future planners take their own, e.g. a Finance Planner would use `FP`) and its parts are numbered within that code — `NLB-SP-001`, `NLB-SP-002`, and so on. The Bible's top-level roadmap (Article VIII) reserves **one** volume number for the whole planner bible, however many parts it eventually has.
 
 ### Versioning
 
@@ -170,14 +173,21 @@ Draft → Master Draft → In Review → Ratified → Superseded
 | 07 | Universal Data Platform (UDP) | NLB-07 | Master Draft |
 | 08 | Universal Experience Framework (UXF) | NLB-08 | Master Draft |
 | 09 | Automation & Workflow Engine (AWE) | NLB-09 | Master Draft |
-| 10 | Identity, Organizations & Security Framework (IOSF) | NLB-10 | Planned |
-| 11 | User Personas | NLB-11 | Planned |
-| 12 | Product Requirements (PRD) | NLB-12 | Planned |
-| 13 | Analytics & Insight Layer | NLB-13 | Planned |
-| 14 | Platform Architecture & Infrastructure | NLB-14 | Planned |
-| 15 | Marketplace & Extensibility | NLB-15 | Planned |
+| 10 | Identity, Organizations & Security Framework (IOSF) | NLB-10 | Master Draft |
+| 11 | Nexa AI Operating System (NAOS) | NLB-11 | Master Draft |
+| 12 | Integration & Connected Services Platform (ICSP) | NLB-12 | Master Draft |
+| 13 | Marketplace & Extensibility Platform (MEP) | NLB-13 | Master Draft |
+| 14 | Community, Competitions & Achievement Platform (CCAP) | NLB-14 | Master Draft |
+| 15 | Master Planner Specification Standard (MPSS) | NLB-15 | Master Draft |
+| 16 | Study Planner Bible (multi-part, series `NLB-SP-001`–`NLB-SP-008`, per the ID scheme above) | NLB-16 | Complete (8 of 8 parts) |
+| 21 | Life Orchestrator & Universal Planning Engine (LOUPE) | NLB-21 | Master Draft |
+| 22 | Nexa Intelligence Core (NIC) (multi-part, series `NLB-NIC-001`+) | NLB-22 | In Progress (1 of ~2 parts written) |
+| 23 | User Personas | NLB-23 | Planned |
+| 24 | Product Requirements (PRD) | NLB-24 | Planned |
+| 25 | Analytics & Insight Layer | NLB-25 | Planned |
+| 26 | Platform Architecture & Infrastructure | NLB-26 | Planned |
 
-> **Note on ordering (v1.0 → v1.1).** Two reassignments have happened so far. First, Volume 03 was reassigned from User Personas to the Universal Life Domain Architecture and Volume 04 from the PRD to the Planner Universe, because both are structural: personas and the PRD are far easier to write once the domain model and the catalogue exist. Second, once the catalogue existed, it became clear the shared engines that every catalogued planner depends on — the Universal Planner Engine, the AI Engine, the Data Platform, the Experience Framework, and the Automation Engine — needed to be designed before any individual planner, persona, or requirement is written against them, since those five volumes constrain everything downstream. Volumes 05–09 were therefore reassigned to that engine sequence, formerly at 07–10, and User Personas and the PRD move again, to 11 and 12. Identity, Organizations & Security (formerly folded into a later "Privacy, Security & Permissions" volume) is promoted to Volume 10, immediately after the five engines, since authentication, permissions, and organizations are load-bearing for personas and the PRD alike. IDs are never reused, so no earlier reference is invalidated — only the title bound to a given number changes until that volume reaches Ratified status.
+> **Note on ordering (v1.0 → v1.5).** Several reassignments have happened so far, each following the same logic: a volume moves earlier when a later volume structurally depends on it. Volume 03 was reassigned from User Personas to the Universal Life Domain Architecture and Volume 04 from the PRD to the Planner Universe, since personas and the PRD are easier to write once the domain model and catalogue exist. Volumes 05–09 were assigned to the five shared engines (Planner, AI, Data, Experience, Automation), because every planner and persona depends on them. Volume 10 (Identity, Organizations & Security) followed the engines for the same reason. Volumes 11–12 (Nexa's own behavior, and external integrations) proved to belong before personas and the PRD as well. Volumes 13–15 continue the pattern: the Marketplace (13) depends on the Automation Engine and the Integration Platform both being in place; Community, Competitions & Achievement (14) is a platform-wide capability layer, not a single planner, so it precedes any individual planner spec; and the Master Planner Specification Standard (15) is the authoring template every individual planner bible must follow. Volume 16 was originally reserved as an eight-volume block (16–23) for the Study Planner Bible's parts, on the assumption each part would consume its own top-level number. Once drafting began, it became clear that scheme doesn't scale — a platform intending hundreds of planners (NLB-04) cannot spend eight top-level volume numbers on each one. Volume 16 is now a single reserved slot for "the Study Planner Bible" as a whole, now complete; its parts are numbered independently as `NLB-SP-001` through `NLB-SP-008`, per the ID scheme in Article VII. Future planner bibles (Finance, Health, and so on) will each claim one top-level slot the same way, with their own part-numbering code. **Volumes 17–20 are retired and will not be reassigned** — they were never published under the old eight-volume assumption, and closing the gap after the fact would only invite the same confusion again; the roadmap simply resumes at 21. Life Orchestrator & Universal Planning Engine (LOUPE), the cross-planner intelligence layer, takes that next open slot — its source material used "NLB-24," carried over from the old assumption that Study Planner's parts 6–8 would occupy 21–23, but LOUPE is a platform-wide capability layer like Volumes 09 and 14, not a planner part, so it is renumbered to NLB-21 to keep the roadmap contiguous. Nexa Intelligence Core (NIC) — a deeper, model-agnostic architecture for Nexa's identity, memory, and orchestration mechanics, sitting underneath NLB-06 and NLB-11 — takes the next slot, 22, using its own `NLB-NIC-*` series correctly from the start. User Personas and the PRD move to 23 and 24; Analytics and Platform Architecture move to 25 and 26. IDs are never reused, so no earlier reference is invalidated — only the title or scheme bound to a given number changes until that volume reaches Ratified status.
 
 ---
 
@@ -203,7 +213,12 @@ A lower document may refine a higher one. It may not contradict it.
 | --- | --- | --- |
 | 1.0 | 2026-08-04 | Initial constitution. Establishes the Traceability Rule, documentation standards, and volume roadmap. |
 | 1.1 | 2026-08-05 | Roadmap amended (MINOR — no article changed, only volume assignments): Volumes 05–09 reassigned to the shared-engine sequence (Universal Planner Engine, AI Engine, Data Platform, Experience Framework, Automation Engine); Identity, Organizations & Security promoted to Volume 10; User Personas and the PRD move to 11 and 12. |
+| 1.2 | 2026-08-05 | Roadmap amended (MINOR): Volumes 11–12 reassigned to Nexa AI Operating System and the Integration & Connected Services Platform; Marketplace & Extensibility reserved at 13; User Personas and the PRD move to 14 and 15. |
+| 1.3 | 2026-08-05 | Roadmap amended (MINOR): Volume 14 reassigned to Community, Competitions & Achievement Platform and Volume 15 to the Master Planner Specification Standard; Volumes 16–23 reserved for the Study Planner Bible's eight parts (the first planner spec written under the MPSS); User Personas and the PRD move to 24 and 25. |
+| 1.4 | 2026-08-05 | Article VII amended (MINOR): added the `NLB-<XX>-NNN` ID scheme for individual planner bible parts (e.g. `NLB-SP-001`). Roadmap amended accordingly: Volume 16 is now a single reserved slot for "the Study Planner Bible" as a whole rather than an eight-volume block; its parts are numbered as their own `NLB-SP-*` series. User Personas and the PRD move to 17 and 18; Analytics and Platform Architecture move to 19 and 20. |
+| 1.5 | 2026-08-05 | Roadmap amended (MINOR): Study Planner Bible marked Complete (all 8 parts written). Volumes 17–20 retired unassigned rather than reassigned, closing out the old eight-volume-block assumption cleanly. Life Orchestrator & Universal Planning Engine (LOUPE) reserved at Volume 21 — renumbered from its source material's "NLB-24," which assumed the retired numbering. User Personas and the PRD move to 22 and 23; Analytics and Platform Architecture move to 24 and 25. |
+| 1.6 | 2026-08-05 | Roadmap amended (MINOR): Nexa Intelligence Core (NIC) reserved at Volume 22, using its own `NLB-NIC-*` series correctly from the start. User Personas and the PRD move to 23 and 24; Analytics and Platform Architecture move to 25 and 26. |
 
 ---
 
-**End of Volume 00 (Version 1.1)**
+**End of Volume 00 (Version 1.6)**
