@@ -26,10 +26,11 @@ The authoritative specification for NexaLife — an AI-powered Life Operating Sy
 | 17–20 | *(retired — see NLB-00 v1.5 note; not reassigned)* | — | Retired |
 | 21 | Life Orchestrator & Universal Planning Engine (LOUPE) | [NLB-21](./NLB-21-life-orchestrator-and-universal-planning-engine.md) | Master Draft (v1.0) |
 | 22 | Nexa Intelligence Core (NIC) (multi-part, series `NLB-NIC-001`+) | [nexa-intelligence-core/](./nexa-intelligence-core/) | In Progress (4 of ~5 parts) |
-| 23 | User Personas | — | Planned |
-| 24 | Product Requirements (PRD) | — | Planned |
-| 25 | Analytics & Insight Layer | — | Planned |
-| 26 | Platform Architecture & Infrastructure | — | Planned |
+| 23 | NXOS — Nexa Operating Layer (multi-part, series `NLB-NXOS-001`+) | [nxos/](./nxos/) | In Progress (6 of ~6 parts) |
+| 24 | User Personas | — | Planned |
+| 25 | Product Requirements (PRD) | — | Planned |
+| 26 | Analytics & Insight Layer | — | Planned |
+| 27 | Platform Architecture & Infrastructure | — | Planned |
 
 See `NLB-00` Article VIII for the full roadmap and the rationale behind the current ordering, and Article VII for documentation standards (ID scheme, versioning, status lifecycle, amendment process — including the `NLB-<XX>-NNN` scheme multi-part series use for their own parts).
 
@@ -41,6 +42,7 @@ Some volumes are big enough to need their own numbered series rather than a sing
 | --- | --- | --- | --- |
 | `NLB-SP-*` | The Study Planner — first planner spec'd under the MPSS (NLB-15) | [planners/study-planner/](./planners/study-planner/) | 001–008 (complete) |
 | `NLB-NIC-*` | Nexa Intelligence Core — Nexa's model-agnostic identity, memory, orchestration, action-taking, cross-device presence, and developer platform | [nexa-intelligence-core/](./nexa-intelligence-core/) | 001 Identity/Memory/Orchestration, 002 Action Engine, 003 Nexa Everywhere, 004 Developer Platform & AI Ecosystem |
+| `NLB-NXOS-*` | NXOS — the 20-year coordination-layer vision, and its four fabrics (Cognitive/Goal, Memory, Agent, Knowledge, Workflow) formalized in depth | [nxos/](./nxos/) | 001 Coordination Layer, 002 Cognitive Architecture, 003 Memory System, 004 AI Agent Ecosystem, 005 Knowledge Graph, 006 Hyper Automation |
 
 Future planner bibles (Finance, Health, Business, and so on) will follow the same pattern under `docs/nexalife-bible/planners/<planner-name>/`, each with its own two-or-three-letter series code.
 
