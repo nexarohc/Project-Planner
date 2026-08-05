@@ -5,7 +5,7 @@
 | Field | Value |
 | --- | --- |
 | Document ID | NLB-00 |
-| Version | 1.6 |
+| Version | 1.7 |
 | Status | Master Draft |
 | Priority | ★★★★★ (Critical) |
 | Supersedes | — |
@@ -181,7 +181,7 @@ Draft → Master Draft → In Review → Ratified → Superseded
 | 15 | Master Planner Specification Standard (MPSS) | NLB-15 | Master Draft |
 | 16 | Study Planner Bible (multi-part, series `NLB-SP-001`–`NLB-SP-008`, per the ID scheme above) | NLB-16 | Complete (8 of 8 parts) |
 | 21 | Life Orchestrator & Universal Planning Engine (LOUPE) | NLB-21 | Master Draft |
-| 22 | Nexa Intelligence Core (NIC) (multi-part, series `NLB-NIC-001`+) | NLB-22 | In Progress (1 of ~2 parts written) |
+| 22 | Nexa Intelligence Core (NIC) (multi-part, series `NLB-NIC-001`+) | NLB-22 | In Progress (4 of ~5 parts written) |
 | 23 | User Personas | NLB-23 | Planned |
 | 24 | Product Requirements (PRD) | NLB-24 | Planned |
 | 25 | Analytics & Insight Layer | NLB-25 | Planned |
@@ -218,7 +218,8 @@ A lower document may refine a higher one. It may not contradict it.
 | 1.4 | 2026-08-05 | Article VII amended (MINOR): added the `NLB-<XX>-NNN` ID scheme for individual planner bible parts (e.g. `NLB-SP-001`). Roadmap amended accordingly: Volume 16 is now a single reserved slot for "the Study Planner Bible" as a whole rather than an eight-volume block; its parts are numbered as their own `NLB-SP-*` series. User Personas and the PRD move to 17 and 18; Analytics and Platform Architecture move to 19 and 20. |
 | 1.5 | 2026-08-05 | Roadmap amended (MINOR): Study Planner Bible marked Complete (all 8 parts written). Volumes 17–20 retired unassigned rather than reassigned, closing out the old eight-volume-block assumption cleanly. Life Orchestrator & Universal Planning Engine (LOUPE) reserved at Volume 21 — renumbered from its source material's "NLB-24," which assumed the retired numbering. User Personas and the PRD move to 22 and 23; Analytics and Platform Architecture move to 24 and 25. |
 | 1.6 | 2026-08-05 | Roadmap amended (MINOR): Nexa Intelligence Core (NIC) reserved at Volume 22, using its own `NLB-NIC-*` series correctly from the start. User Personas and the PRD move to 23 and 24; Analytics and Platform Architecture move to 25 and 26. |
+| 1.7 | 2026-08-05 | Status update (MINOR, no reassignment): Volume 22 (NIC) progress updated to 4 of ~5 parts written (Identity/Memory/Orchestration, Action Engine, Nexa Everywhere, Developer Platform & AI Ecosystem). |
 
 ---
 
-**End of Volume 00 (Version 1.6)**
+**End of Volume 00 (Version 1.7)**
