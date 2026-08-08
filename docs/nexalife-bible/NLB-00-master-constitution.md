@@ -5,7 +5,7 @@
 | Field | Value |
 | --- | --- |
 | Document ID | NLB-00 |
-| Version | 1.10 |
+| Version | 1.11 |
 | Status | Master Draft |
 | Priority | ★★★★★ (Critical) |
 | Supersedes | — |
@@ -183,15 +183,16 @@ Draft → Master Draft → In Review → Ratified → Superseded
 | 21 | Life Orchestrator & Universal Planning Engine (LOUPE) | NLB-21 | Master Draft |
 | 22 | Nexa Intelligence Core (NIC) (multi-part, series `NLB-NIC-001`+) | NLB-22 | In Progress (4 of ~5 parts written) |
 | 23 | NXOS — Nexa Operating Layer (multi-part, series `NLB-NXOS-001`+) | NLB-23 | In Progress (6 of ~6 parts written) |
-| 24 | Health Operating System (HealthOS) (multi-part, series `NLB-HOS-001`+) | NLB-24 | Complete (5 parts) |
-| 25 | Fitness & Performance OS (FPOS) (multi-part, series `NLB-FPOS-001`+) | NLB-25 | Complete (2 parts) |
+| 24 | Health Operating System (HealthOS) (multi-part, series `NLB-HOS-001`+) | NLB-24 | Complete (6 parts) |
+| 25 | Fitness & Performance OS (FPOS) (multi-part, series `NLB-FPOS-001`+) | NLB-25 | Complete (3 parts) |
 | 26 | BucketList & Experience OS (BLOS) (multi-part, series `NLB-BLOS-001`+) | NLB-26 | Complete (2 parts) |
 | 27 | Relationships & Social Life OS (RSOS) (multi-part, series `NLB-RSOS-001`+) | NLB-27 | Complete (2 parts) |
 | 28 | Finance, Wealth & Financial Freedom OS (FWOS) (multi-part, series `NLB-FWOS-001`+) | NLB-28 | Complete (2 parts) |
-| 29 | User Personas | NLB-29 | Planned |
-| 30 | Product Requirements (PRD) | NLB-30 | Planned |
-| 31 | Analytics & Insight Layer | NLB-31 | Planned |
-| 32 | Platform Architecture & Infrastructure | NLB-32 | Planned |
+| 29 | Career, Work & Professional Growth OS (CWOS) (multi-part, series `NLB-CWOS-001`+) | NLB-29 | Complete (2 parts) |
+| 30 | User Personas | NLB-30 | Planned |
+| 31 | Product Requirements (PRD) | NLB-31 | Planned |
+| 32 | Analytics & Insight Layer | NLB-32 | Planned |
+| 33 | Platform Architecture & Infrastructure | NLB-33 | Planned |
 
 > **Note on ordering (v1.0 → v1.5).** Several reassignments have happened so far, each following the same logic: a volume moves earlier when a later volume structurally depends on it. Volume 03 was reassigned from User Personas to the Universal Life Domain Architecture and Volume 04 from the PRD to the Planner Universe, since personas and the PRD are easier to write once the domain model and catalogue exist. Volumes 05–09 were assigned to the five shared engines (Planner, AI, Data, Experience, Automation), because every planner and persona depends on them. Volume 10 (Identity, Organizations & Security) followed the engines for the same reason. Volumes 11–12 (Nexa's own behavior, and external integrations) proved to belong before personas and the PRD as well. Volumes 13–15 continue the pattern: the Marketplace (13) depends on the Automation Engine and the Integration Platform both being in place; Community, Competitions & Achievement (14) is a platform-wide capability layer, not a single planner, so it precedes any individual planner spec; and the Master Planner Specification Standard (15) is the authoring template every individual planner bible must follow. Volume 16 was originally reserved as an eight-volume block (16–23) for the Study Planner Bible's parts, on the assumption each part would consume its own top-level number. Once drafting began, it became clear that scheme doesn't scale — a platform intending hundreds of planners (NLB-04) cannot spend eight top-level volume numbers on each one. Volume 16 is now a single reserved slot for "the Study Planner Bible" as a whole, now complete; its parts are numbered independently as `NLB-SP-001` through `NLB-SP-008`, per the ID scheme in Article VII. Future planner bibles (Finance, Health, and so on) will each claim one top-level slot the same way, with their own part-numbering code. **Volumes 17–20 are retired and will not be reassigned** — they were never published under the old eight-volume assumption, and closing the gap after the fact would only invite the same confusion again; the roadmap simply resumes at 21. Life Orchestrator & Universal Planning Engine (LOUPE), the cross-planner intelligence layer, takes that next open slot — its source material used "NLB-24," carried over from the old assumption that Study Planner's parts 6–8 would occupy 21–23, but LOUPE is a platform-wide capability layer like Volumes 09 and 14, not a planner part, so it is renumbered to NLB-21 to keep the roadmap contiguous. Nexa Intelligence Core (NIC) — a deeper, model-agnostic architecture for Nexa's identity, memory, and orchestration mechanics, sitting underneath NLB-06 and NLB-11 — takes the next slot, 22, using its own `NLB-NIC-*` series correctly from the start. NXOS — Nexa Operating Layer, the 20-year coordination-layer vision — takes slot 23, also using its own series (`NLB-NXOS-*`) correctly from the start. Its Part 1 introduced four "fabrics" (Context, Knowledge, Memory, Workflow); a proposed batch of five further top-level volumes (Cognitive Architecture, Universal Memory System, AI Agent Ecosystem, Universal Knowledge Graph, Hyper Automation Engine) were folded into this same series as Parts 2–6 instead, since each mapped directly onto a fabric NXOS had just named — publishing them separately would have re-derived concepts NLB-06, NLB-07, NLB-09, NLB-10, and NLB-21 already establish, under new names. User Personas and the PRD move to 24 and 25; Analytics and Platform Architecture move to 26 and 27. IDs are never reused, so no earlier reference is invalidated — only the title or scheme bound to a given number changes until that volume reaches Ratified status.
 
@@ -228,7 +229,8 @@ A lower document may refine a higher one. It may not contradict it.
 | 1.8 | 2026-08-05 | Roadmap amended (MINOR): NXOS — Nexa Operating Layer reserved at Volume 23, using its own `NLB-NXOS-*` series. A proposed batch of five further top-level volumes was folded into this series as Parts 2–6 rather than published separately, since each mapped directly onto a fabric NXOS Part 1 had already named. User Personas and the PRD move to 24 and 25; Analytics and Platform Architecture move to 26 and 27. |
 | 1.9 | 2026-08-05 | Roadmap amended (MINOR): four individual planner bibles reserved — HealthOS (24), Fitness & Performance OS (25), BucketList & Experience OS (26), Relationships & Social Life OS (27), each using its own `NLB-<XX>-*` series. A proposed parallel "Health, Wellness & Personal Vitality OS" volume was folded into HealthOS as Part 5 rather than published separately, since it substantially restated HealthOS Parts 1–4. User Personas and the PRD move to 28 and 29; Analytics and Platform Architecture move to 30 and 31. |
 | 1.10 | 2026-08-05 | Roadmap amended (MINOR): Finance, Wealth & Financial Freedom OS reserved at Volume 28, using the `NLB-FWOS-*` series. User Personas and the PRD move to 29 and 30; Analytics and Platform Architecture move to 31 and 32. |
+| 1.11 | 2026-08-05 | Roadmap amended (MINOR): Career, Work & Professional Growth OS reserved at Volume 29 (`NLB-CWOS-*`). A third proposed parallel health volume was again folded into existing series — new health material to HealthOS Part 6, new training material to FPOS Part 3 — rather than published as a duplicate. User Personas and the PRD move to 30 and 31; Analytics and Platform Architecture move to 32 and 33. |
 
 ---
 
-**End of Volume 00 (Version 1.10)**
+**End of Volume 00 (Version 1.11)**

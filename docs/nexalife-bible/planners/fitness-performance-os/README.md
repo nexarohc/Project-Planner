@@ -10,3 +10,4 @@ Home domains: **LD-06 Health**, **LD-11 Sports & Athletics** (`NLB-03`). Catalog
 | --- | --- | --- |
 | 1 | Core Fitness Engine, AI Coaching & Performance Intelligence | [NLB-FPOS-001](./NLB-FPOS-001-core-fitness-engine-ai-coaching-and-performance-intelligence.md) |
 | 2 | IRL Competition Network, Sports Ecosystem & Performance Infrastructure | [NLB-FPOS-002](./NLB-FPOS-002-irl-competition-network-and-sports-ecosystem.md) |
+| 3 | Constraint-Aware Training, Equipment Adaptation & Plan Resilience | [NLB-FPOS-003](./NLB-FPOS-003-constraint-aware-training-and-adaptive-planning.md) |
