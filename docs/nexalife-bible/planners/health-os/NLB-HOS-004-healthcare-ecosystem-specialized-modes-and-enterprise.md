@@ -6,7 +6,7 @@
 | --- | --- |
 | Document ID | NLB-HOS-004 |
 | Series | Health Operating System (Volume 24) |
-| Version | 1.0 |
+| Version | 1.1 |
 | Status | Master Draft |
 | Classification | Production Architecture Specification |
 | Priority | ★★★★★ |
@@ -106,6 +106,8 @@ Implementations **support established healthcare interoperability standards rath
 
 **Import** preserves source, timestamp, original file, and imported interpretation — never collapsing the original into the interpretation. **Export** produces PDF health summaries, structured data, original documents, and timeline exports, **understandable to humans, not just machines.**
 
+**Provenance watermark.** Exported summaries carry an optional marker — *"Generated from NexaLife user records"* — distinguishing a user-compiled record from an official clinical document. A NexaLife-generated summary can look authoritative enough to be mistaken for a clinician's document once it leaves the app, and a clinician receiving one needs to know which it is.
+
 **Portability.** Users can export data, disconnect devices, remove integrations, delete records, and close their health workspace — `NLB-07`'s data portability right, stated here because trust in a health platform depends on the exit being as real as the entrance.
 
 ---
@@ -177,10 +179,11 @@ HealthOS should never become an application that simply tells people to *"track 
 
 | Version | Date | Change |
 | --- | --- | --- |
+| 1.1 | 2026-08-05 | Added the provenance watermark on exported health summaries. |
 | 1.0 | 2026-08-05 | Initial Healthcare Ecosystem, Specialized Modes, Interoperability & Enterprise specification, completing HealthOS. Establishes the pharmacy/appointment/provider ecosystems, granular and time-boxed sharing control, Rehabilitation Mode's organize-don't-prescribe boundary, five specialized health modes, the Health Knowledge Engine's source-confidence tiers, zero-trust security, and enterprise privacy boundaries. |
 
 ---
 
-**End of Part 4 (Version 1.0)**
+**End of Part 4 (Version 1.1)**
 
 **END OF THE HEALTH OPERATING SYSTEM SPECIFICATION**

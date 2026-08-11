@@ -6,7 +6,7 @@
 | --- | --- |
 | Document ID | NLB-HOS-005 |
 | Series | Health Operating System (Volume 24) |
-| Version | 1.0 |
+| Version | 1.1 |
 | Status | Master Draft |
 | Classification | Production Architecture Specification |
 | Priority | ★★★★☆ |
@@ -59,6 +59,17 @@ This is the most substantive addition in this part, and it protects every insigh
 
 **Source Priority** lets the user designate a preferred source per metric (sleep → wearable; steps → phone; weight → smart scale), resolving conflicts deterministically rather than silently averaging.
 
+**Reconciliation is shown, not hidden.** When two sources disagree, the user sees both readings, which source won, and why:
+
+```
+SOURCE A          8,420 steps
+SOURCE B          8,610 steps
+Preferred source  Wearable
+Displayed         8,420
+```
+
+The user can override the preference for that metric or that day. Averaging two conflicting readings into a third number that neither device reported would be the easy path and the wrong one — it manufactures a measurement while concealing that a disagreement existed at all.
+
 **Manual Override & Correction History** — users can always correct imported data, and corrections are recorded with original value, new value, date, and source, preserving transparency per `NLB-07`'s versioning guarantees.
 
 **Device Trust & Disconnection** — connected devices carry a trust state and last-sync time; unknown or revoked connections are blocked. A stale device produces *"Sleep data hasn't synced since Tuesday,"* not a silently degraded insight.
@@ -102,6 +113,22 @@ Natural conversation (*"I haven't been sleeping well"*) is answered with the use
 Users can run structured personal experiments — *"Try going to bed 30 minutes earlier for two weeks"* — with a defined goal, change, duration, and measures. Nexa reports the observed difference (*"Your average sleep increased by 28 minutes"*) and **explicitly does not claim the experiment scientifically proves causation.**
 
 This is a genuinely novel capability: it gives the user a structured way to test a change against their own baseline, which is more honest than a recommendation engine asserting what will work for them.
+
+**Experiment safety boundary.** Experiments stay within ordinary lifestyle behaviour. Nexa must never propose or encourage experimenting with **medication changes, dangerous fasting, extreme exercise, stopping medical treatment, or unsafe dietary practices**. The structured-experiment framing is precisely what could make such a suggestion sound rigorous and therefore safe, which is why the exclusions are named explicitly rather than left to the general Level 4 boundary in `NLB-HOS-002`.
+
+---
+
+## Goal Conflict Detection
+
+Health goals routinely compete, and optimizing each in isolation produces a plan that fails at both:
+
+```
+GOAL A     Increase training
+GOAL B     Improve recovery
+CONFLICT   Current schedule may reduce rest days
+```
+
+**Nexa surfaces the conflict rather than silently optimizing both.** Users rank goals (e.g. sleep consistency → strength → mobility → weight management) and planning respects that ranking — the Health-domain instance of `NLB-21`'s Conflict Detection and `NLB-FWOS-001`'s Goal Collision Detection.
 
 ---
 
@@ -168,8 +195,9 @@ Nexa supports your health. **Nexa does not pretend to be your doctor.**
 
 | Version | Date | Change |
 | --- | --- | --- |
+| 1.1 | 2026-08-05 | Added visible source reconciliation (both readings shown, no silent averaging), the experiment safety boundary naming excluded categories, and Goal Conflict Detection. |
 | 1.0 | 2026-08-05 | Added personal baselines, the data-quality layer (gaps, conflicts, source priority, correction history, graceful failure), wellness experiments, situational modes (jet-lag, shift-work, environmental), coaching modes, and the cross-OS permission firewall. Deliberately scoped to new material only, since the proposed parallel "HWOS" volume substantially restated NLB-HOS-001–004. |
 
 ---
 
-**End of Part 5 (Version 1.0)**
+**End of Part 5 (Version 1.1)**
