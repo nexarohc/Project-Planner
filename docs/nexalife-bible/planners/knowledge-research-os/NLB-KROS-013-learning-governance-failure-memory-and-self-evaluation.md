@@ -6,7 +6,7 @@
 | --- | --- |
 | Document ID | NLB-KROS-013 |
 | Series | Knowledge, Research & Personal Intelligence OS (Volume 31) |
-| Version | 1.1 |
+| Version | 1.2 |
 | Status | Master Draft |
 | Classification | Production Architecture Specification |
 | Priority | ★★★★★ |
@@ -157,6 +157,24 @@ This is the aggregation problem, and it is easy to get wrong in exactly the syst
 
 ---
 
+## Learning Integrity
+
+Three failures that only appear once a system is genuinely optimizing.
+
+**Reward hacking.** A workflow optimized for speed must not reach the target by sacrificing correctness. Any measure a system is pushed against stops measuring what it was chosen to represent, and the system will find the cheap path first because the cheap path is what optimization is for. **Objectives are balanced explicitly** — quality, safety, speed, cost, and user intent — and where they conflict the trade-off is surfaced: *"this option is faster but less comprehensive."*
+
+**Satisfaction is not correctness.** A response is not successful because the user liked it. Where objective criteria exist, outputs are judged against them, and **correctness feedback outranks stylistic feedback** — a system that learns primarily from approval learns to be agreeable, which is a different objective from being right and diverges exactly where it matters.
+
+**Memory and learning stay separate.** Memory stores what is true; learning changes how future tasks are approached. Collapsing them means a stored fact quietly becomes a behavioural rule, and a behavioural preference quietly becomes a stored fact.
+
+**Source reliability degrades.** A source that was reliable can stop being so, and reliability scores move in both directions on evidence of accuracy history, recency, independence, and consistency (`NLB-KROS-001`).
+
+**Failed experiments are retained.** Knowing which approaches did not work — and why — is what stops the system rediscovering them, and it is the half of the experiment log that always gets discarded.
+
+**Capability gaps are proposed, never assumed**: *"a calendar integration would remove this manual step."* The user or an administrator decides. **Learning never grants a permission**, and a successful past action never implies authorization for a future one.
+
+---
+
 ## Governance Over Optimization
 
 > **Optimize within boundaries — never optimize away the boundaries.**
@@ -187,11 +205,12 @@ The system may learn preferences, workflows, and strategies. **Permissions, safe
 
 | Version | Date | Change |
 | --- | --- | --- |
+| 1.2 | 2026-08-12 | Additive (MINOR): learning integrity — reward-hacking defense with explicit objective balancing and surfaced trade-offs, the rule that user satisfaction is not correctness and that correctness feedback outranks stylistic feedback, the separation of memory from learning, source reliability that degrades in both directions, retained failed-experiment memory, and capability gaps proposed rather than assumed with learning never granting a permission. |
 | 1.1 | 2026-08-12 | Additive (MINOR): repeated negative feedback triggers investigation rather than blind behavioural adjustment, and positive feedback strengthens workflow confidence without overriding later explicit instruction. |
 | 1.0 | 2026-08-12 | Initial learning governance specification, drawn from source Part 15. Establishes the six-field anatomy of a learned behaviour with scoped promotion, preference decay and reconfirmation, learning dashboard/reset/rollback/audit; **correction reconciliation** distinguishing authoritative preference corrections from factual claims that must meet the evidence, with the learning-is-not-truth rule; failure memory with classification, strategy-changing retries and known-failure surfacing before repetition; self-evaluation with draft-critique passes, adversarial review, alternative hypotheses and pre-set success criteria; routing that learns from benchmarked performance (`NLB-06` still owns routing itself); action confidence thresholds with risk-chosen safe fallbacks and the rule that repeated approval never becomes standing authorization; sandboxed A/B experimentation with pre-declared rollback; **derived-data protection** against the aggregation problem, where a conclusion assembled from individually-permitted parts would otherwise become unrestricted; and governance over optimization. The autonomy ladder, feedback categories and bounded self-improvement are not redefined — they remain with `NLB-NIC-002` and `NLB-KROS-004`. |
 
 ---
 
-**End of Part 13 (Version 1.1)**
+**End of Part 13 (Version 1.2)**
 
 **END OF THE KNOWLEDGE, RESEARCH & PERSONAL INTELLIGENCE OPERATING SYSTEM SPECIFICATION**

@@ -6,7 +6,7 @@
 | --- | --- |
 | Document ID | NLB-KROS-004 |
 | Series | Knowledge, Research & Personal Intelligence OS (Volume 31) |
-| Version | 1.0 |
+| Version | 1.1 |
 | Status | Master Draft |
 | Classification | Production Architecture Specification |
 | Priority | ★★★★★ |
@@ -118,6 +118,20 @@ ORGANIZATION
 **Role-based learning and onboarding** map role → required knowledge → documents → training → assessment, drawing on `NLB-KROS-002`'s learning layer. Internal assessments record **completion of an internal program** — never professional certification unless formally authorized.
 
 **Policy Q&A** answers *"what is our travel policy?"* from approved internal sources, where **approved policy outranks informal notes**. Where two policies conflict, the conflict is surfaced with the newer approved version identified — *"these documents appear inconsistent"* — and an unresolved conflict raises **owner review**, because the system's job is to detect the contradiction, not to arbitrate it.
+
+### Collaborative knowledge
+
+Where several people build knowledge together, **contribution is tracked** — who supplied which evidence — and reviewers mark each piece: **Supported / Questioned / Rejected / Needs review**.
+
+**Team consensus is summarized without erasing dissent**: *"three reviewers support this conclusion; one disputes it."* A shared knowledge base that reports only the majority view has destroyed the information most worth keeping, since the dissenting reviewer is often the one who checked.
+
+**Canonical sources** can be designated per topic and rank above other internal material. **A canonical source that appears outdated is flagged, never silently superseded** — replacing the organization's designated authority on the system's own judgement is exactly the decision the organization reserved for itself.
+
+**Duplication is surfaced with a consolidation proposal** — *"these five documents overlap; create a consolidated reference?"* — and **knowledge reuse rate** measures how often existing knowledge answers a new question, which is the only figure here that indicates whether the knowledge base is working.
+
+**Expertise mapping is evidence-based**: role, contributions, approved credentials, and project history — never inferred from activity volume. *"Who knows most about this process?"* returns people with the evidence for the claim attached.
+
+**Knowledge events** (`created`, `updated`, `approved`, `archived`) publish to `NLB-NIC-004`'s event bus so authorized workflows can react — a newly approved policy notifying the affected team, for instance.
 
 ### Organizational blind spots
 
@@ -232,6 +246,7 @@ Part 4 is architecturally complete when it supports: automation (natural-languag
 
 | Version | Date | Change |
 | --- | --- | --- |
+| 1.1 | 2026-08-12 | Additive (MINOR): collaborative knowledge — contribution tracking, per-evidence review states, team consensus summarized without erasing dissent, canonical sources flagged rather than silently superseded when stale, duplication with consolidation proposals, knowledge reuse rate, evidence-based expertise mapping, and knowledge events published to the platform event bus. |
 | 1.0 | 2026-08-12 | Initial knowledge automation and security specification, drawn from source Part 5. Establishes natural-language automation with approval gates and failure escalation, agentic research pipelines with task graphs and red-teaming before synthesis, declared research cost, the research cache with mandatory freshness metadata and contradiction-driven invalidation, peer review and claim/evidence registers with exportable audit trails, organizational institutional memory with handover and single-point knowledge risk detection, five-level permission resolution binding the AI at the synthesis layer, redaction with preview, scoped forget and memory correction, export control and sharing preview, the AI security boundary including **prompt-injection defense** (the first treatment of it in the Bible), least-privilege agents with identity and immediate three-scope stop controls, and bounded self-improvement prohibiting autonomous modification of safety boundaries. Scoped explicitly against NLB-09, NLB-10, NLB-NXOS-004/006, and NLB-CPIOS-002. |
 
 ---

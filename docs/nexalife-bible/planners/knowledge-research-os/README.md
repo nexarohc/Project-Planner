@@ -19,6 +19,7 @@ Home domains: **LD-02 Education** and **LD-16 Science & Research** (`NLB-03`). C
 | 11 | Forecasting, Simulation, Decision Models & Prediction Calibration | [NLB-KROS-011](./NLB-KROS-011-forecasting-simulation-decision-models-and-prediction-calibration.md) |
 | 12 | Search Strategy, Entity Qualification, Verification Modes & Research Reproducibility | [NLB-KROS-012](./NLB-KROS-012-search-strategy-entity-qualification-and-research-reproducibility.md) |
 | 13 | Learning Governance, Failure Memory, Self-Evaluation & Derived-Data Protection | [NLB-KROS-013](./NLB-KROS-013-learning-governance-failure-memory-and-self-evaluation.md) |
+| 14 | Reasoning Validation, Competing Hypotheses & Option Generation | [NLB-KROS-014](./NLB-KROS-014-reasoning-validation-competing-hypotheses-and-option-generation.md) |
 
 ## What this series owns — and what it doesn't
 
