@@ -255,5 +255,3 @@ The last step is the one that distinguishes an intelligence system from a search
 ---
 
 **End of Part 5 (Version 1.0)**
-
-**END OF THE KNOWLEDGE, RESEARCH & PERSONAL INTELLIGENCE OPERATING SYSTEM SPECIFICATION**

@@ -6,11 +6,11 @@
 | --- | --- |
 | Document ID | NLB-NIC-002 |
 | Series | Nexa Intelligence Core (Volume 22) |
-| Version | 1.0 |
+| Version | 1.1 |
 | Status | Master Draft |
 | Priority | ★★★★★ (Action & Automation Framework) |
 | Supersedes | — |
-| Last updated | 2026-08-05 |
+| Last updated | 2026-08-12 |
 
 ---
 
@@ -71,6 +71,55 @@ Each workflow instance carries a goal, tasks, dependencies, conditions, permissi
 ## Approval Checkpoints
 
 Actions that normally require confirmation: sending emails, initiating phone calls, editing large amounts of user data, sharing files externally, booking travel, purchasing products, financial transactions, and deleting information. Users can configure trusted workflows where appropriate — the same "user can pre-authorize a class of action" mechanism `NLB-09` establishes for Approval Flows generally.
+
+---
+
+## The Autonomy Ladder
+
+Approval Checkpoints answer *whether* a given action needs confirmation. This answers the prior question: **how much independence a capability has been granted at all.** Six levels, assigned per task type rather than globally:
+
+| Level | Nexa may |
+| --- | --- |
+| **0** | Answer only |
+| **1** | Suggest |
+| **2** | Prepare and draft |
+| **3** | Execute with per-instance approval |
+| **4** | Execute predefined low-risk tasks without per-instance approval |
+| **5** | Operate continuously under a standing delegation |
+
+A single user typically runs several levels at once — research at 4, drafting at 2, sending at 3, anything financial stricter still. **Autonomy is granted per capability and never inherited**: a workflow trusted to monitor sources has not thereby been trusted to send messages.
+
+**Level 5 is bounded, always.** Continuous operation remains constrained by explicit permissions, policies, budgets, and stop controls; it is not a state in which Nexa acts freely, only one in which it acts repeatedly.
+
+### Delegation contracts
+
+Every autonomous workflow carries an explicit contract, and **the forbidden list is stated rather than implied**:
+
+```
+PURPOSE      Monitor project
+ALLOWED      Read sources · Analyze changes · Notify user
+NOT ALLOWED  Send external messages · Change records · Spend money
+BUDGET       7 days · 50 actions · no spending
+ESCALATION   On conflict or confidence below threshold
+```
+
+Naming what a workflow may not do is what makes a delegation reviewable — a permission list alone leaves the boundary to inference, and inference is where autonomy quietly widens.
+
+**Delegations expire and are renewed deliberately**: *"your market-monitoring delegation expires tomorrow — renew?"* An open-ended grant is one the user stops reconsidering.
+
+**Action quotas** bound how much a workflow can do, so a misconfigured automation reaches a limit rather than running unbounded.
+
+**Pause conditions** halt a workflow when confidence drops below threshold, sources conflict, scope changes, budget is exceeded, an unexpected action appears, or permissions change. Each of these means the situation is no longer the one the delegation was granted for.
+
+### Oversight
+
+**Action risk classification** — low (read, summarize), medium (create, modify), high (external action, commitment), critical (irreversible or high-impact) — sets confirmation strength, so a summary is not gated like a payment and a payment is never gated like a summary.
+
+**No dark autonomy.** Nexa never conceals consequential autonomous activity. A **delegation centre** shows everything currently delegated and its state, and a complete autonomy log records what happened, why, when, which agent, which tools, what data, and what result.
+
+**Stop is always available**, and after stopping, the state is reported plainly: *"stopped after completing 7 of 12 steps; no further actions were taken."* A stop control whose aftermath is unclear is not one users will rely on.
+
+> Trust comes from transparency, control, evidence, reversibility, and consistency — not from a friendly personality.
 
 ---
 
@@ -156,6 +205,7 @@ Nexa should reduce the effort required to accomplish meaningful work while ensur
 
 | Version | Date | Change |
 | --- | --- | --- |
+| 1.1 | 2026-08-12 | Additive (MINOR): the Autonomy Ladder added — six levels assigned per capability and never inherited, delegation contracts stating forbidden actions explicitly alongside allowed ones, expiration and deliberate renewal, action quotas, pause conditions, action risk classification driving confirmation strength, the no-dark-autonomy rule with a delegation centre and complete autonomy log, and reported state after a stop. Promoted here from the KROS source material because autonomy is platform-level: `NLB-KROS-007` applies this ladder to knowledge work rather than defining a second one. |
 | 1.0 | 2026-08-05 | Initial Nexa Action Engine specification. Establishes the Action Lifecycle, seven Action Types, Approval Checkpoints, and Automation Rules — all built on the Connector Architecture (NLB-12) and Automation Engine (NLB-09) already specified, never a parallel system. |
 
 ---
