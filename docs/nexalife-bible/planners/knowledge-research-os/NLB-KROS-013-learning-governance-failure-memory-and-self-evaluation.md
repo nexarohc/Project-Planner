@@ -6,7 +6,7 @@
 | --- | --- |
 | Document ID | NLB-KROS-013 |
 | Series | Knowledge, Research & Personal Intelligence OS (Volume 31) |
-| Version | 1.0 |
+| Version | 1.1 |
 | Status | Master Draft |
 | Classification | Production Architecture Specification |
 | Priority | ★★★★★ |
@@ -72,6 +72,8 @@ USER CLAIM  +  EXTERNAL EVIDENCE  →  RECONCILIATION
 *"The company is a manufacturer, not a distributor"* corrects the current result immediately and **updates the stored classification only where the evidence supports it** — otherwise both are held, with their sources, as the conflicting record `NLB-KROS-001` requires.
 
 **A system that lets any assertion overwrite verified evidence has no verification layer**, only a delay before the user's belief becomes the record. Corrections therefore carry their own provenance: correction, source, date, scope, confidence.
+
+**Repeated dissatisfaction triggers investigation, not adjustment.** A system that keeps changing behaviour in response to negative feedback without diagnosing it will walk through the option space and land somewhere arbitrary — the user is dissatisfied for a reason, and the reason is the thing worth finding. Positive feedback likewise strengthens confidence in a workflow without ever overriding a later explicit instruction.
 
 > **Learning is not truth.** A repeated user preference does not make a factual claim true, and a frequently-used model assumption never becomes evidence.
 
@@ -185,10 +187,11 @@ The system may learn preferences, workflows, and strategies. **Permissions, safe
 
 | Version | Date | Change |
 | --- | --- | --- |
+| 1.1 | 2026-08-12 | Additive (MINOR): repeated negative feedback triggers investigation rather than blind behavioural adjustment, and positive feedback strengthens workflow confidence without overriding later explicit instruction. |
 | 1.0 | 2026-08-12 | Initial learning governance specification, drawn from source Part 15. Establishes the six-field anatomy of a learned behaviour with scoped promotion, preference decay and reconfirmation, learning dashboard/reset/rollback/audit; **correction reconciliation** distinguishing authoritative preference corrections from factual claims that must meet the evidence, with the learning-is-not-truth rule; failure memory with classification, strategy-changing retries and known-failure surfacing before repetition; self-evaluation with draft-critique passes, adversarial review, alternative hypotheses and pre-set success criteria; routing that learns from benchmarked performance (`NLB-06` still owns routing itself); action confidence thresholds with risk-chosen safe fallbacks and the rule that repeated approval never becomes standing authorization; sandboxed A/B experimentation with pre-declared rollback; **derived-data protection** against the aggregation problem, where a conclusion assembled from individually-permitted parts would otherwise become unrestricted; and governance over optimization. The autonomy ladder, feedback categories and bounded self-improvement are not redefined — they remain with `NLB-NIC-002` and `NLB-KROS-004`. |
 
 ---
 
-**End of Part 13 (Version 1.0)**
+**End of Part 13 (Version 1.1)**
 
 **END OF THE KNOWLEDGE, RESEARCH & PERSONAL INTELLIGENCE OPERATING SYSTEM SPECIFICATION**

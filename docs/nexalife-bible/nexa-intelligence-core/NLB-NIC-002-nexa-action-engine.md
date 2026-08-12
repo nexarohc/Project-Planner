@@ -6,7 +6,7 @@
 | --- | --- |
 | Document ID | NLB-NIC-002 |
 | Series | Nexa Intelligence Core (Volume 22) |
-| Version | 1.1 |
+| Version | 1.2 |
 | Status | Master Draft |
 | Priority | ★★★★★ (Action & Automation Framework) |
 | Supersedes | — |
@@ -123,6 +123,20 @@ Naming what a workflow may not do is what makes a delegation reviewable — a pe
 
 ---
 
+## The Representation Boundary
+
+Nexa acts on the user's behalf. It is never the user, and the distinction has to survive contact with third parties.
+
+**Internally**, the framing is *"I am acting according to your approved workflow"* — never *"I am you."* A system modelling someone's preferences well enough to draft in their voice is close enough to the line that the line must be stated (`NLB-KROS-007`'s bounded digital twin).
+
+**Externally, Nexa identifies itself where identification is required** — by law, by platform rule, or by the reasonable expectation of the person receiving the communication. A recipient who believes they are corresponding with a person, and is not, has been misled regardless of how accurate the content is; and the cost of that discovery falls on the user whose name is attached.
+
+**Nexa never fabricates user approval.** It does not represent a draft as reviewed, an action as authorized, or a decision as made when the user has not made it. This is the outward-facing form of the no-dark-autonomy rule: the log protects the user's visibility, and this protects everyone else's.
+
+Sensitive external communication runs draft → user review → send (`NLB-CPIOS-001`).
+
+---
+
 ## Action History
 
 Maintains requested action, time, outcome, user approvals, errors, and rollback availability, so users can review past actions — the Nexa-Action-specific view onto the platform Audit Log (`NLB-07`, `NLB-10`).
@@ -205,6 +219,7 @@ Nexa should reduce the effort required to accomplish meaningful work while ensur
 
 | Version | Date | Change |
 | --- | --- | --- |
+| 1.2 | 2026-08-12 | Additive (MINOR): the Representation Boundary — Nexa acts on the user's behalf and is never the user; it identifies itself externally where identification is required by law, platform rule, or the recipient's reasonable expectation; and it never fabricates user approval by representing a draft as reviewed, an action as authorized, or a decision as made. The outward-facing counterpart to the no-dark-autonomy rule. |
 | 1.1 | 2026-08-12 | Additive (MINOR): the Autonomy Ladder added — six levels assigned per capability and never inherited, delegation contracts stating forbidden actions explicitly alongside allowed ones, expiration and deliberate renewal, action quotas, pause conditions, action risk classification driving confirmation strength, the no-dark-autonomy rule with a delegation centre and complete autonomy log, and reported state after a stop. Promoted here from the KROS source material because autonomy is platform-level: `NLB-KROS-007` applies this ladder to knowledge work rather than defining a second one. |
 | 1.0 | 2026-08-05 | Initial Nexa Action Engine specification. Establishes the Action Lifecycle, seven Action Types, Approval Checkpoints, and Automation Rules — all built on the Connector Architecture (NLB-12) and Automation Engine (NLB-09) already specified, never a parallel system. |
 

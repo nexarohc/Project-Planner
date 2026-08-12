@@ -6,7 +6,7 @@
 | --- | --- |
 | Document ID | NLB-KROS-011 |
 | Series | Knowledge, Research & Personal Intelligence OS (Volume 31) |
-| Version | 1.0 |
+| Version | 1.1 |
 | Status | Master Draft |
 | Classification | Production Architecture Specification |
 | Priority | ★★★★★ |
@@ -121,6 +121,17 @@ CHANGE WEIGHTS → RECALCULATE → SAME WINNER?
 
 **Opportunity cost is stated explicitly** — *"choosing A means giving up B's flexibility"* — and every consequential decision exposes benefits, costs, risks, trade-offs, and **unknowns**.
 
+### Constraints
+
+Options are filtered before they are scored, and the two kinds of constraint behave differently:
+
+| | |
+| --- | --- |
+| **Hard** | Must not be violated — budget ceiling, deadline, regulatory requirement, compatibility |
+| **Soft** | Preferred — quality, location, convenience |
+
+**A hard constraint is never traded away by a high score elsewhere.** Where nothing satisfies all of them, the answer is *"no qualifying option was found"* — followed, usefully, by **which constraint eliminated the field** and what relaxing it would admit. Silently returning the closest near-miss is the failure here: it looks like an answer, and the user has no signal that their stated requirement was quietly downgraded to a preference.
+
 ### Uncertainty and the value of information
 
 Variables are separated into **Known / Estimated / Assumed / Unknown**, and where an unknown could change the outcome, it is said: *"this decision depends heavily on something we don't currently know."*
@@ -216,8 +227,9 @@ And it should keep score of its own forecasts — because a system that never ch
 
 | Version | Date | Change |
 | --- | --- | --- |
+| 1.1 | 2026-08-12 | Additive (MINOR): hard and soft constraints as distinct kinds, with hard constraints never traded against a high score, an explicit "no qualifying option was found" rather than a silent near-miss, and reporting of which constraint eliminated the field. |
 | 1.0 | 2026-08-12 | Initial forecasting and simulation specification, drawn from source Part 13. Establishes the seven-field prediction object with refusal on insufficient evidence, ranges as the primary output over point estimates, the signal-strength ladder where Confirmed requires evidence rather than agreement among weak signals, distribution-output simulation applied only where the model is defensible, weighted decision matrices whose weighting is shown in the result, **robustness testing and named reversal points**, value-of-information ranking, threshold and break-even identification, **prediction calibration measuring whether stated confidence matched accuracy** with never-revised historical forecasts, forecast and decision watches with verify-before-act contingency automation, plan-drift detection with never-silent strategy adaptation, and the Fact/Forecast/Scenario/Hypothesis boundary keeping simulated results out of the knowledge base. Scenario mechanics remain with `NLB-KROS-005`, prediction framing and the risk register with `NLB-KROS-007`, dependency and alert handling with `NLB-KROS-010`, and financial modelling with `NLB-FWOS-002`. |
 
 ---
 
-**End of Part 11 (Version 1.0)**
+**End of Part 11 (Version 1.1)**
