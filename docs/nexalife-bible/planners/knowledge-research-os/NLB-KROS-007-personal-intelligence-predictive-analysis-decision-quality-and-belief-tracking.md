@@ -19,7 +19,7 @@
 
 ## Purpose
 
-The final part of the series covers what accumulated knowledge is ultimately *for*: anticipating what is coming, making better decisions, and tracking how the user's own beliefs change as evidence arrives.
+Part 7 covers what accumulated knowledge is ultimately *for*: anticipating what is coming, making better decisions, and tracking how the user's own beliefs change as evidence arrives.
 
 > NexaLife should be capable of operating continuously on the user's behalf **without becoming uncontrollable on the user's behalf.**
 
