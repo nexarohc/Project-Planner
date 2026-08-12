@@ -6,11 +6,11 @@
 | --- | --- |
 | Document ID | NLB-NXOS-005 |
 | Series | NXOS — Nexa Operating Layer (Volume 23) |
-| Version | 1.0 |
+| Version | 1.1 |
 | Status | Master Draft |
 | Priority | ★★★★★ (Connected Data Architecture) |
 | Supersedes | — |
-| Last updated | 2026-08-05 |
+| Last updated | 2026-08-12 |
 
 ---
 
@@ -92,6 +92,50 @@ New Life Domains (`NLB-03`), new planners (`NLB-04`), and new Marketplace assets
 
 ---
 
+## Temporal Edges
+
+An edge is not necessarily true forever. Every relationship may carry a validity interval:
+
+```
+Person A ──WORKED_WITH──> Company B     valid 2024–2026
+```
+
+Without this, a graph answers *"who works with whom"* using facts that stopped being true, and the error is invisible because the edge looks identical either way. Temporal validity is also what lets `NLB-KROS-006`'s time-travel research reconstruct the graph **as it stood** at a past date rather than only as it stands now.
+
+**Edges carry provenance and confidence** — the source that supports the relationship, and whether it is Confirmed / Strong / Probable / Possible / Unknown. An inferred edge is retained as an inference, never promoted to a confirmed one by repeated traversal.
+
+---
+
+## Path Finding
+
+*"How are these two companies connected?"* is a path query, and **the answer is the chain, not the verdict**:
+
+```
+Company A → Person X → Organization B → Project C
+```
+
+Asserting "they are connected" without the path is unusable: the user cannot judge whether the connection is meaningful, and cannot spot the hop that is wrong. Path results carry the evidence for each edge, at the zoom level requested — high-level relationships, detailed relationships, or source evidence.
+
+**A path is not a cause.** Where evidence does not establish causation, the connection is labelled correlation or hypothesis, per `NLB-KROS-008`'s evidence-bound causal edges — a rendered arrow is read as causation regardless of how the underlying edge was typed.
+
+---
+
+## Live, Stored & Historical Nodes
+
+Three kinds of node value are kept distinguishable, because they age differently and mislead differently:
+
+| Kind | Meaning |
+| --- | --- |
+| **Live** | Read from an authorized source at query time |
+| **Stored** | Retrieved and retained; carries published / updated / retrieved / verified dates |
+| **Historical** | Known to describe a past state |
+
+A stored value presented as live is the most common graph error in practice. Nodes therefore surface freshness alongside the value and warn where it has aged past its configured requirement (`NLB-KROS-001`).
+
+**Authorized live-source changes propagate**: source update → graph update → dependency check → affected workflows and subscribers, feeding `NLB-KROS-008`'s impact analysis.
+
+---
+
 ## Design Principle
 
 The measure of this graph is not how much it stores, but how directly a real question — "what do I need to do before X" — can be answered by walking it. **If a connection cannot be traversed to answer a real question, it is not doing its job, regardless of how complete the graph looks.**
@@ -102,6 +146,7 @@ The measure of this graph is not how much it stores, but how directly a real que
 
 | Version | Date | Change |
 | --- | --- | --- |
+| 1.1 | 2026-08-12 | Additive (MINOR): temporal edges with validity intervals (which is what lets NLB-KROS-006 reconstruct the graph as it stood at a past date), edge provenance and confidence with inferred edges never promoted by traversal, path finding that returns the chain and its evidence rather than a verdict and refuses to render correlation as causation, and the live/stored/historical node distinction with freshness surfaced and authorized live-source changes propagating into NLB-KROS-008's impact analysis. Drawn from the KROS source material and placed here because the graph is platform-level. |
 | 1.0 | 2026-08-05 | Initial Universal Knowledge Graph specification. Formalizes NLB-07's Relationship Model and NLB-21's Universal Life Graph into explicit node types, edge types, permission-aware traversal, and a worked query example. |
 
 ---
