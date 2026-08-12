@@ -181,7 +181,7 @@ Draft → Master Draft → In Review → Ratified → Superseded
 | 15 | Master Planner Specification Standard (MPSS) | NLB-15 | Master Draft |
 | 16 | Study Planner Bible (multi-part, series `NLB-SP-001`–`NLB-SP-008`, per the ID scheme above) | NLB-16 | Complete (8 of 8 parts) |
 | 21 | Life Orchestrator & Universal Planning Engine (LOUPE) | NLB-21 | Master Draft |
-| 22 | Nexa Intelligence Core (NIC) (multi-part, series `NLB-NIC-001`+) | NLB-22 | In Progress (4 of ~5 parts written; NLB-NIC-002 at v1.1) |
+| 22 | Nexa Intelligence Core (NIC) (multi-part, series `NLB-NIC-001`+) | NLB-22 | In Progress (4 of ~5 parts written) |
 | 23 | NXOS — Nexa Operating Layer (multi-part, series `NLB-NXOS-001`+) | NLB-23 | In Progress (6 of ~6 parts written) |
 | 24 | Health Operating System (HealthOS) (multi-part, series `NLB-HOS-001`+) | NLB-24 | Complete (6 parts) |
 | 25 | Fitness & Performance OS (FPOS) (multi-part, series `NLB-FPOS-001`+) | NLB-25 | Complete (3 parts) |

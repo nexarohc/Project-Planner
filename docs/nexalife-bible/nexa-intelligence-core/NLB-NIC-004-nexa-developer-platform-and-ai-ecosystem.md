@@ -6,11 +6,11 @@
 | --- | --- |
 | Document ID | NLB-NIC-004 |
 | Series | Nexa Intelligence Core (Volume 22) |
-| Version | 1.0 |
+| Version | 1.1 |
 | Status | Master Draft |
 | Priority | ★★★★★ (Developer & Ecosystem Architecture) |
 | Supersedes | — |
-| Last updated | 2026-08-05 |
+| Last updated | 2026-08-12 |
 
 ---
 
@@ -155,6 +155,46 @@ The platform accommodates new AI providers, emerging integration standards, indu
 
 ---
 
+## Tool Registry & Routing
+
+Every available tool lives in one registry — browser, files, email, calendar, database, spreadsheet, messaging, code — and Nexa selects among them by capability rather than by name:
+
+```
+TASK → REQUIRED CAPABILITY → AVAILABLE TOOLS → BEST TOOL → EXECUTION
+```
+
+**Fallback is bounded by authorization**: if Tool A fails, Tool B is used **only where it is already authorized and appropriate for the task**. A fallback that reaches for a differently-permissioned tool is a privilege escalation wearing the costume of resilience.
+
+**Tool health is visible**, and a degraded tool degrades gracefully rather than failing the whole workflow (`NLB-KROS-006`).
+
+**Tool call preview** exposes tool, action, and inputs for users who want to see the call before it happens.
+
+---
+
+## Data Contracts & Isolation
+
+**Every extension declares what it expects and what it returns.** Agents exchange **structured objects rather than uncontrolled text** wherever the exchange is machine-to-machine — free text between agents is where scope quietly widens and where injected instructions travel (`NLB-KROS-004`).
+
+**Extension isolation is the default**: a third-party extension gains no access to unrelated user data by virtue of being installed. Data reaching an extension follows the minimum-data path — task → required data → **only** required data → extension — with irrelevant sensitive fields redacted where technically possible.
+
+**Connector scope is granular and project-limitable**: read but not send, attachments but not deletion, *"this research agent may access only the Project X folder."*
+
+---
+
+## The Event Bus
+
+Extensions, agents, and workflows subscribe to typed platform events rather than polling:
+
+```
+document.created · task.completed · deadline.changed
+research.updated · calendar.changed · workflow.failed
+```
+
+**Events are scoped and authenticated.** An event carries only what its subscriber is authorized to receive, and a subscription is a permission grant like any other — an unscoped event bus is a permission bypass that no individual connector's settings can close.
+
+
+---
+
 ## Design Principle
 
 The Developer Platform should make extending NexaLife straightforward without compromising security, performance, or user trust. **A healthy ecosystem depends on stable contracts, transparent governance, and a consistent developer experience** — and, specifically here, on never trading that stability for allegiance to one AI provider or protocol.
@@ -165,6 +205,7 @@ The Developer Platform should make extending NexaLife straightforward without co
 
 | Version | Date | Change |
 | --- | --- | --- |
+| 1.1 | 2026-08-12 | Additive (MINOR): capability-based tool routing with authorization-bounded fallback, tool health and tool call preview; data contracts with structured object exchange between agents rather than free text, default extension isolation, minimum-data delivery with redaction, and granular project-scoped connector permissions; the typed event bus with scoped, authenticated events treated as permission grants. Drawn from the KROS source material and placed here because the developer platform owns extension mechanics. |
 | 1.0 | 2026-08-05 | Initial Nexa Developer Platform & AI Ecosystem specification. Establishes AI Skills, the AI Tool Registry, and multi-provider/multi-protocol (including MCP) compatibility as the AI-specific specialization of NLB-13's general Marketplace mechanics. |
 
 ---

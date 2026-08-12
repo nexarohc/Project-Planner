@@ -6,11 +6,11 @@
 | --- | --- |
 | Document ID | NLB-NXOS-004 |
 | Series | NXOS — Nexa Operating Layer (Volume 23) |
-| Version | 1.0 |
+| Version | 1.1 |
 | Status | Master Draft |
 | Priority | ★★★★★ (Specialist Registration Standard) |
 | Supersedes | — |
-| Last updated | 2026-08-05 |
+| Last updated | 2026-08-12 |
 
 ---
 
@@ -96,6 +96,63 @@ Third-party specialists published through `NLB-13` and `NLB-NIC-004` must satisf
 
 ---
 
+## The Capability Declaration
+
+Registration (above) says what an agent *is*. The capability declaration says what it may do — **and, explicitly, what it may not**:
+
+```
+CAN     ✓ Research companies  ✓ Compare suppliers  ✓ Generate reports
+CANNOT  ✕ Send emails  ✕ Make purchases  ✕ Modify accounts
+```
+
+The negative list is the load-bearing half. A permission list alone leaves the boundary to inference, and an agent's limits are exactly what a user needs to see before granting it anything.
+
+**Permissions are granted independently of installation.** Installing an agent confers no access to private data or external systems; discovery → capabilities → permissions → install → configure → **authorize** → activate keeps the two decisions separate, so "I want to try this" never doubles as "I trust this with my email."
+
+**Dependencies are disclosed before activation** — a required agent, connector, data source, model, skill, or external service. An agent whose real reach is one hop away through an undisclosed dependency has not actually declared its capabilities.
+
+**A permission change on update requires fresh review**: *"this update requests access to your email — review before enabling."* Silent permission growth across versions is the most reliable way an ecosystem loses the boundary it started with.
+
+---
+
+## Agent Teams
+
+Multiple agents can work one objective under the orchestrator, with distinct roles — researcher, analyst, **critic**, writer, **verifier**, executor. The critic checks for missing evidence, logical errors, contradictions, and unsupported assumptions; the verifier checks only whether claims are supported by available evidence.
+
+**Agent debate**: for selected questions, agents analyze independently and their conclusions are compared rather than merged.
+
+**Consensus is not truth**, and the display says so:
+
+```
+Agent A → Supports   Agent B → Supports   Agent C → Challenges
+Evidence → Mixed
+```
+
+**Dissent stays visible.** A minority conclusion that is dropped because it was outvoted has been discarded on the least relevant criterion available — agents agreeing tells you about the agents, and models sharing training data share their errors.
+
+**Quality gates** run before final output — evidence, logic, policy, permissions, output — and a failed gate blocks with a reason: *"the report is not ready because two major claims remain unverified."*
+
+---
+
+## Agent Lifecycle & Stop Controls
+
+Agents are marked **Active / Deprecated / Retired**, and staleness is surfaced: *"this agent has not been maintained for 11 months."* **Replacement recommendations favour narrower permission** — *"a newer agent provides the same capability with fewer permissions"* — which is the correct default for an ecosystem where permission creep is the usual drift.
+
+**Sandbox before production**: agent → sandbox → test inputs → **tool simulation** → security review → production, per `NLB-13`'s Sandbox Model. Dangerous or external actions are simulated, never performed, during testing.
+
+**Security events** are monitored: unexpected tool calls, permission escalation, repeated failures, anomalous behaviour.
+
+**Kill switches at three scopes** — one agent, one workflow, all automation — available to the user and, in organizations, to an authorized administrator. Stopping is a **safe shutdown**, not an abort:
+
+```
+STOP NEW ACTIONS → FINISH SAFE OPERATIONS → CLOSE SESSIONS → SAVE STATE → REPORT
+```
+
+Killing an agent mid-write can leave worse damage than the behaviour being stopped. The sequence is what makes the control usable in the moment it is actually needed.
+
+
+---
+
 ## Design Principle
 
 A platform with hundreds of specialists stays coherent only if every specialist is legible the same way. **The value of this volume is the seven fields, not the roster** — the roster already lives in `NLB-04` and grows with every new planner; the schema is what keeps that growth from becoming chaos.
@@ -106,6 +163,7 @@ A platform with hundreds of specialists stays coherent only if every specialist 
 
 | Version | Date | Change |
 | --- | --- | --- |
+| 1.1 | 2026-08-12 | Additive (MINOR): the capability declaration with an explicit CANNOT list, permissions granted independently of installation, disclosed dependencies, fresh review on permission-changing updates; agent teams with critic and verifier roles, agent debate, consensus explicitly not treated as truth, visible dissent, and quality gates before output; agent lifecycle states with staleness surfacing and replacement recommendations favouring narrower permission, sandbox-with-tool-simulation before production, security-event monitoring, and three-scope kill switches with a safe-shutdown sequence. Drawn from the KROS source material and placed here because the agent ecosystem is platform-level. |
 | 1.0 | 2026-08-05 | Initial AI Agent Ecosystem specification. Establishes the seven-field specialist registration schema (Capabilities, Knowledge Scope, Tool Access, Memory Scope, Permission Model, Collaboration Rules, Escalation Logic) and three Sensitivity Tiers, worked through Doctor Assistant AI and Legal AI as examples rather than re-cataloging specialists already listed in NLB-04. |
 
 ---

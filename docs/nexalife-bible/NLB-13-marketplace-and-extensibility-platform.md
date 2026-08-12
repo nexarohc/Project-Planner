@@ -5,11 +5,11 @@
 | Field | Value |
 | --- | --- |
 | Document ID | NLB-13 |
-| Version | 1.0 |
+| Version | 1.1 |
 | Status | Master Draft |
 | Priority | ★★★★★ (Platform Growth Architecture) |
 | Supersedes | — |
-| Last updated | 2026-08-05 |
+| Last updated | 2026-08-12 |
 
 ---
 
@@ -127,6 +127,25 @@ Creators can access installations, active users, retention, ratings, revenue, cr
 
 ---
 
+## Cost Transparency & Limits
+
+Where an asset incurs real cost, the user sees its shape before committing: subscription, usage, tool, and external API charges shown separately rather than as one figure.
+
+**Hard limits are user-set** — *"never spend more than ₹500 per month on this workflow"* — with an **alert before the ceiling**, not at it: *"this workflow has used 80% of its monthly budget."* A limit that only announces itself by stopping the work has failed at the moment it mattered.
+
+**Cost optimization is advisory**: *"a lower-cost model can perform this step without materially changing the expected result."* Nexa proposes; it does not silently downgrade a step the user chose.
+
+---
+
+## Trust Signals, Honestly Stated
+
+An asset profile may show verification status, publisher identity, version history, permission requirements, user feedback, and security-review status. **None of it is presented as a guarantee of safety**, and a trust score is never rendered as one.
+
+**"Verified" is claimed only where the stated verification process has actually been completed.** A badge that means less than users read it to mean is worse than no badge — it transfers the platform's credibility to an asset that has not earned it, and it is the mechanism by which marketplace trust collapses all at once rather than gradually.
+
+
+---
+
 ## Design Principle
 
 The Marketplace should encourage innovation without compromising platform reliability. **Core platform quality, user trust, and security always take precedence over ecosystem growth** — a fast-growing Marketplace that erodes trust in the platform has failed by this volume's own standard.
@@ -137,6 +156,7 @@ The Marketplace should encourage innovation without compromising platform reliab
 
 | Version | Date | Change |
 | --- | --- | --- |
+| 1.1 | 2026-08-12 | Additive (MINOR): cost transparency with separated subscription, usage, tool and external API charges, user-set hard limits with alerts before the ceiling, and advisory-only cost optimization; trust signals stated honestly, with no trust score presented as a safety guarantee and "Verified" claimed only where the stated verification has actually been completed. Drawn from the KROS source material. |
 | 1.0 | 2026-08-05 | Initial Marketplace & Extensibility Platform specification. Establishes eight asset types, the Sandbox Model, the Review Process, and configurable (not hardcoded) revenue sharing. |
 
 ---
