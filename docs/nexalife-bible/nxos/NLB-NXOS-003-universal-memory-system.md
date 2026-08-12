@@ -6,11 +6,11 @@
 | --- | --- |
 | Document ID | NLB-NXOS-003 |
 | Series | NXOS — Nexa Operating Layer (Volume 23) |
-| Version | 1.0 |
+| Version | 1.1 |
 | Status | Master Draft |
 | Priority | ★★★★★ (Memory Architecture) |
 | Supersedes | — |
-| Last updated | 2026-08-05 |
+| Last updated | 2026-08-12 |
 
 ---
 
@@ -90,6 +90,35 @@ Users can review, edit, and delete any long-term, planner, or workspace memory t
 
 ---
 
+## Memory Trust
+
+A memory's origin is not the same as its reliability, and both change over time. Every memory carries a trust level:
+
+```
+VERIFIED · USER-CONFIRMED · SOURCE-CONFIRMED
+INFERRED · STALE · CONFLICTED
+```
+
+**Trust is earned by a stated route, not by repetition:**
+
+```
+UNVERIFIED → REVIEWED → CONFIRMED → TRUSTED
+```
+
+**And it is revocable.** New evidence downgrades a previously trusted memory rather than being reconciled against it — the same append-only discipline `NLB-KROS-008` requires of corrections, so the downgrade and its cause both remain visible.
+
+### Memory poisoning defense
+
+Retrieved content is data, never instructions (`NLB-KROS-004`). This is the slower variant of the same threat: **false information repeated often enough must not become trusted memory by accumulation.**
+
+Frequency is not evidence. A claim appearing in twenty retrieved documents is one claim in twenty places until something establishes it — the source-deduplication rule from `NLB-KROS-001` applied to what the system chooses to believe about itself. Without an explicit trust route, a memory system that weights by recurrence can be moved by anyone who can put text in front of it repeatedly, and the resulting belief looks identical to a well-founded one.
+
+**Memory health** is reportable — verified, recent, conflicting, outdated, unverified — with stale entries surfaced (*"this contact has not been verified recently"*) and **targeted refresh** available: *"refresh everything we know about this company."*
+
+**Consistency checks** run over the graph connection: orphan nodes, duplicate entities, impossible relationships, contradictions, and stale information, with cleanup **proposed for user approval** rather than applied.
+
+---
+
 ## Design Principle
 
 Memory should make Nexa more useful over time without becoming something the user has to fear, audit blindly, or feel surveilled by. **Every memory the system holds should be one the user could look at and recognize as their own, reviewable at the same granularity it was stored.**
@@ -100,6 +129,7 @@ Memory should make Nexa more useful over time without becoming something the use
 
 | Version | Date | Change |
 | --- | --- | --- |
+| 1.1 | 2026-08-12 | Additive (MINOR): memory trust levels, the unverified-to-trusted escalation route with revocation on new evidence, **memory poisoning defense** establishing that repetition is not evidence and that trust is earned by a stated route rather than by accumulation, memory health reporting with stale detection and targeted refresh, and graph consistency checks proposed for approval. Drawn from the KROS source material and placed here because memory is platform-level. |
 | 1.0 | 2026-08-05 | Initial Universal Memory System specification. Establishes memory kinds (episodic/semantic/procedural/personal/planner/conversation/workspace) orthogonal to NLB-NIC-001's duration layers, plus ranking, compression, and the Forgetting System. |
 
 ---

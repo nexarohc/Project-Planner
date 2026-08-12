@@ -198,5 +198,3 @@ The test is narrow: given a project, can the system say what state it is in, why
 ---
 
 **End of Part 10 (Version 1.0)**
-
-**END OF THE KNOWLEDGE, RESEARCH & PERSONAL INTELLIGENCE OPERATING SYSTEM SPECIFICATION**

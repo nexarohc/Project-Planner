@@ -221,5 +221,3 @@ And it should keep score of its own forecasts — because a system that never ch
 ---
 
 **End of Part 11 (Version 1.0)**
-
-**END OF THE KNOWLEDGE, RESEARCH & PERSONAL INTELLIGENCE OPERATING SYSTEM SPECIFICATION**

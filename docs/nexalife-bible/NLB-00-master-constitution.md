@@ -190,7 +190,7 @@ Draft → Master Draft → In Review → Ratified → Superseded
 | 28 | Finance, Wealth & Financial Freedom OS (FWOS) (multi-part, series `NLB-FWOS-001`+) | NLB-28 | Complete (2 parts) |
 | 29 | Career, Work & Professional Growth OS (CWOS) (multi-part, series `NLB-CWOS-001`+) | NLB-29 | Complete (2 parts) |
 | 30 | Communication & Personal Information OS (CPIOS) (multi-part, series `NLB-CPIOS-001`+) | NLB-30 | Complete (2 parts) |
-| 31 | Knowledge, Research & Personal Intelligence OS (KROS) (multi-part, series `NLB-KROS-001`+) | NLB-31 | Complete (10 parts) |
+| 31 | Knowledge, Research & Personal Intelligence OS (KROS) (multi-part, series `NLB-KROS-001`+) | NLB-31 | Complete (13 parts) |
 | 32 | User Personas | NLB-32 | Planned |
 | 33 | Product Requirements (PRD) | NLB-33 | Planned |
 | 34 | Analytics & Insight Layer | NLB-34 | Planned |

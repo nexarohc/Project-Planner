@@ -34,7 +34,7 @@ The authoritative specification for NexaLife — an AI-powered Life Operating Sy
 | 28 | Finance, Wealth & Financial Freedom OS (FWOS) | [planners/finance-wealth-os/](./planners/finance-wealth-os/) | **Complete** (2 parts) |
 | 29 | Career, Work & Professional Growth OS (CWOS) | [planners/career-work-os/](./planners/career-work-os/) | **Complete** (2 parts) |
 | 30 | Communication & Personal Information OS (CPIOS) | [planners/communication-personal-info-os/](./planners/communication-personal-info-os/) | **Complete** (2 parts) |
-| 31 | Knowledge, Research & Personal Intelligence OS (KROS) | [planners/knowledge-research-os/](./planners/knowledge-research-os/) | **Complete** (10 parts) |
+| 31 | Knowledge, Research & Personal Intelligence OS (KROS) | [planners/knowledge-research-os/](./planners/knowledge-research-os/) | **Complete** (13 parts) |
 | 32 | User Personas | — | Planned |
 | 33 | Product Requirements (PRD) | — | Planned |
 | 34 | Analytics & Insight Layer | — | Planned |
@@ -48,7 +48,7 @@ Some volumes are big enough to need their own numbered series rather than a sing
 
 | Series | Covers | Directory | Parts written |
 | --- | --- | --- | --- |
-| `NLB-SP-*` | The Study Planner — first planner spec'd under the MPSS (NLB-15) | [planners/study-planner/](./planners/study-planner/) | 001–010 (complete) |
+| `NLB-SP-*` | The Study Planner — first planner spec'd under the MPSS (NLB-15) | [planners/study-planner/](./planners/study-planner/) | 001–013 (complete) |
 | `NLB-NIC-*` | Nexa Intelligence Core — Nexa's model-agnostic identity, memory, orchestration, action-taking, cross-device presence, and developer platform | [nexa-intelligence-core/](./nexa-intelligence-core/) | 001 Identity/Memory/Orchestration, 002 Action Engine, 003 Nexa Everywhere, 004 Developer Platform & AI Ecosystem |
 | `NLB-NXOS-*` | NXOS — the 20-year coordination-layer vision, and its four fabrics (Cognitive/Goal, Memory, Agent, Knowledge, Workflow) formalized in depth | [nxos/](./nxos/) | 001 Coordination Layer, 002 Cognitive Architecture, 003 Memory System, 004 AI Agent Ecosystem, 005 Knowledge Graph, 006 Hyper Automation |
 | `NLB-HOS-*` | HealthOS — whole-person health: medical organization, wellness, nutrition, sleep, mental wellbeing, healthcare ecosystem | [planners/health-os/](./planners/health-os/) | 001–006 (complete) |
@@ -58,7 +58,7 @@ Some volumes are big enough to need their own numbered series rather than a sing
 | `NLB-FWOS-*` | Finance, Wealth & Financial Freedom OS — cash flow, budgeting, debt, investing, business finance, wealth architecture | [planners/finance-wealth-os/](./planners/finance-wealth-os/) | 001–002 (complete) |
 | `NLB-CWOS-*` | Career, Work & Professional Growth OS — career strategy, jobs, freelance, leadership, entrepreneurship | [planners/career-work-os/](./planners/career-work-os/) | 001–002 (complete) |
 | `NLB-CPIOS-*` | Communication & Personal Information OS — unified inbox, agents, automation safety, personal data vault, digital identity | [planners/communication-personal-info-os/](./planners/communication-personal-info-os/) | 001–002 (complete) |
-| `NLB-KROS-*` | Knowledge, Research & Personal Intelligence OS — research methodology, verification, knowledge workspace, agentic pipelines, security, reasoning tools | [planners/knowledge-research-os/](./planners/knowledge-research-os/) | 001–010 (complete) |
+| `NLB-KROS-*` | Knowledge, Research & Personal Intelligence OS — research methodology, verification, knowledge workspace, agentic pipelines, security, reasoning tools | [planners/knowledge-research-os/](./planners/knowledge-research-os/) | 001–013 (complete) |
 
 **Scope boundaries between planner bibles.** HealthOS owns whole-person wellbeing; FPOS owns training and competition (and is the sport-specific implementation of `NLB-14`'s competition framework, not a second one); BLOS is the full product specification of the Bucket List Platform capability `NLB-14` established; RSOS owns relationships and communication; FWOS owns money, and connects to BLOS so savings become experiences; CPIOS owns communication as a system where RSOS owns it as relationship context; KROS owns research methodology, deferring student learning mechanics to the Study Planner and the knowledge graph itself to NXOS. Each bible's README states its boundary explicitly.
 
