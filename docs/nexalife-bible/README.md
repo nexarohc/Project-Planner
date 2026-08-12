@@ -6,7 +6,7 @@ The authoritative specification for NexaLife — an AI-powered Life Operating Sy
 
 | Volume | Title | Document | Status |
 | --- | --- | --- | --- |
-| 00 | Master Constitution | [NLB-00](./NLB-00-master-constitution.md) | Master Draft (v1.11) |
+| 00 | Master Constitution | [NLB-00](./NLB-00-master-constitution.md) | Master Draft (v1.12) |
 | 01 | Product Vision & Strategy | [NLB-01](./NLB-01-product-vision-and-strategy.md) | Draft (v1.0) |
 | 02 | Market Research & Competitor Analysis | [NLB-02](./NLB-02-market-research-and-competitor-analysis.md) | Master Draft (v1.0) |
 | 03 | Universal Life Domain Architecture (ULDA) | [NLB-03](./NLB-03-universal-life-domain-architecture.md) | Master Draft (v1.1) |
@@ -30,7 +30,7 @@ The authoritative specification for NexaLife — an AI-powered Life Operating Sy
 | 24 | Health Operating System (HealthOS) | [planners/health-os/](./planners/health-os/) | **Complete** (6 parts) |
 | 25 | Fitness & Performance OS (FPOS) | [planners/fitness-performance-os/](./planners/fitness-performance-os/) | **Complete** (3 parts) |
 | 26 | BucketList & Experience OS (BLOS) | [planners/bucketlist-os/](./planners/bucketlist-os/) | **Complete** (2 parts) |
-| 27 | Relationships & Social Life OS (RSOS) | [planners/relationships-social-os/](./planners/relationships-social-os/) | **Complete** (2 parts) |
+| 27 | Relationships & Social Life OS (RSOS) | [planners/relationships-social-os/](./planners/relationships-social-os/) | **Complete** (3 parts) |
 | 28 | Finance, Wealth & Financial Freedom OS (FWOS) | [planners/finance-wealth-os/](./planners/finance-wealth-os/) | **Complete** (2 parts) |
 | 29 | Career, Work & Professional Growth OS (CWOS) | [planners/career-work-os/](./planners/career-work-os/) | **Complete** (2 parts) |
 | 30 | User Personas | — | Planned |
@@ -52,7 +52,7 @@ Some volumes are big enough to need their own numbered series rather than a sing
 | `NLB-HOS-*` | HealthOS — whole-person health: medical organization, wellness, nutrition, sleep, mental wellbeing, healthcare ecosystem | [planners/health-os/](./planners/health-os/) | 001–006 (complete) |
 | `NLB-FPOS-*` | Fitness & Performance OS — training, sport, and the IRL competition network | [planners/fitness-performance-os/](./planners/fitness-performance-os/) | 001–003 (complete) |
 | `NLB-BLOS-*` | BucketList & Experience OS — dreams into planned, funded, booked, remembered experiences | [planners/bucketlist-os/](./planners/bucketlist-os/) | 001–002 (complete) |
-| `NLB-RSOS-*` | Relationships & Social Life OS — People Graph, communication intelligence, communities | [planners/relationships-social-os/](./planners/relationships-social-os/) | 001–002 (complete) |
+| `NLB-RSOS-*` | Relationships & Social Life OS — People Graph, communication intelligence, communities, family coordination, life-memory | [planners/relationships-social-os/](./planners/relationships-social-os/) | 001–003 (complete) |
 | `NLB-FWOS-*` | Finance, Wealth & Financial Freedom OS — cash flow, budgeting, debt, investing, business finance, wealth architecture | [planners/finance-wealth-os/](./planners/finance-wealth-os/) | 001–002 (complete) |
 | `NLB-CWOS-*` | Career, Work & Professional Growth OS — career strategy, jobs, freelance, leadership, entrepreneurship | [planners/career-work-os/](./planners/career-work-os/) | 001–002 (complete) |
 

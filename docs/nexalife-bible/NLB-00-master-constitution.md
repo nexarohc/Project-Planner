@@ -5,7 +5,7 @@
 | Field | Value |
 | --- | --- |
 | Document ID | NLB-00 |
-| Version | 1.11 |
+| Version | 1.12 |
 | Status | Master Draft |
 | Priority | ★★★★★ (Critical) |
 | Supersedes | — |
@@ -186,7 +186,7 @@ Draft → Master Draft → In Review → Ratified → Superseded
 | 24 | Health Operating System (HealthOS) (multi-part, series `NLB-HOS-001`+) | NLB-24 | Complete (6 parts) |
 | 25 | Fitness & Performance OS (FPOS) (multi-part, series `NLB-FPOS-001`+) | NLB-25 | Complete (3 parts) |
 | 26 | BucketList & Experience OS (BLOS) (multi-part, series `NLB-BLOS-001`+) | NLB-26 | Complete (2 parts) |
-| 27 | Relationships & Social Life OS (RSOS) (multi-part, series `NLB-RSOS-001`+) | NLB-27 | Complete (2 parts) |
+| 27 | Relationships & Social Life OS (RSOS) (multi-part, series `NLB-RSOS-001`+) | NLB-27 | Complete (3 parts) |
 | 28 | Finance, Wealth & Financial Freedom OS (FWOS) (multi-part, series `NLB-FWOS-001`+) | NLB-28 | Complete (2 parts) |
 | 29 | Career, Work & Professional Growth OS (CWOS) (multi-part, series `NLB-CWOS-001`+) | NLB-29 | Complete (2 parts) |
 | 30 | User Personas | NLB-30 | Planned |
@@ -230,7 +230,8 @@ A lower document may refine a higher one. It may not contradict it.
 | 1.9 | 2026-08-05 | Roadmap amended (MINOR): four individual planner bibles reserved — HealthOS (24), Fitness & Performance OS (25), BucketList & Experience OS (26), Relationships & Social Life OS (27), each using its own `NLB-<XX>-*` series. A proposed parallel "Health, Wellness & Personal Vitality OS" volume was folded into HealthOS as Part 5 rather than published separately, since it substantially restated HealthOS Parts 1–4. User Personas and the PRD move to 28 and 29; Analytics and Platform Architecture move to 30 and 31. |
 | 1.10 | 2026-08-05 | Roadmap amended (MINOR): Finance, Wealth & Financial Freedom OS reserved at Volume 28, using the `NLB-FWOS-*` series. User Personas and the PRD move to 29 and 30; Analytics and Platform Architecture move to 31 and 32. |
 | 1.11 | 2026-08-05 | Roadmap amended (MINOR): Career, Work & Professional Growth OS reserved at Volume 29 (`NLB-CWOS-*`). A third proposed parallel health volume was again folded into existing series — new health material to HealthOS Part 6, new training material to FPOS Part 3 — rather than published as a duplicate. User Personas and the PRD move to 30 and 31; Analytics and Platform Architecture move to 32 and 33. |
+| 1.12 | 2026-08-05 | RSOS extended to 3 parts. A fourth proposed parallel volume ("Family, Relationships & Social Life OS") was folded into RSOS Part 3 — new material only — rather than published as a duplicate of RSOS Parts 1–2 and BLOS Part 2. No roadmap slots changed. |
 
 ---
 
-**End of Volume 00 (Version 1.11)**
+**End of Volume 00 (Version 1.12)**
