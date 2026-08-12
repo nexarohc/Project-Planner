@@ -13,6 +13,7 @@ Home domains: **LD-02 Education** and **LD-16 Science & Research** (`NLB-03`). C
 | 5 | Cognitive Workspace, Reasoning Tools, Knowledge Governance & The Research Command Center | [NLB-KROS-005](./NLB-KROS-005-cognitive-workspace-reasoning-tools-governance-and-research-command-center.md) |
 | 6 | Temporal Knowledge, Context Assembly, Answer Modes & Multi-Model Verification | [NLB-KROS-006](./NLB-KROS-006-temporal-knowledge-context-assembly-and-multi-model-verification.md) |
 | 7 | Personal Intelligence, Predictive Analysis, Decision Quality & Belief Tracking | [NLB-KROS-007](./NLB-KROS-007-personal-intelligence-predictive-analysis-decision-quality-and-belief-tracking.md) |
+| 8 | Multimodal Understanding, Knowledge Lineage & Personalization Boundaries | [NLB-KROS-008](./NLB-KROS-008-multimodal-understanding-knowledge-lineage-and-personalization-boundaries.md) |
 
 ## What this series owns — and what it doesn't
 
