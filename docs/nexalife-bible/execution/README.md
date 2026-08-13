@@ -8,6 +8,8 @@ Cross-cutting; the runtime beneath every planner's actions.
 | --- | --- | --- |
 | 1 | Execution Core, Task Orchestration & Action Integrity | [NLB-AEAOS-001](./NLB-AEAOS-001-execution-core-task-orchestration-and-action-integrity.md) |
 | 2 | Multi-Agent Runtime, Delegation Limits & Agent Security | [NLB-AEAOS-002](./NLB-AEAOS-002-multi-agent-runtime-delegation-limits-and-agent-security.md) |
+| 3 | Connectors, Web Automation, Device Control & Transaction Safety | [NLB-AEAOS-003](./NLB-AEAOS-003-connectors-web-automation-device-control-and-transaction-safety.md) |
+| 4 | Event-Driven Execution, Proactive Operations & Automation Restraint | [NLB-AEAOS-004](./NLB-AEAOS-004-event-driven-execution-and-proactive-operations.md) |
 
 ## Boundary against NLB-NIC-002
 

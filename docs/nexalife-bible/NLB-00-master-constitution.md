@@ -191,7 +191,7 @@ Draft → Master Draft → In Review → Ratified → Superseded
 | 29 | Career, Work & Professional Growth OS (CWOS) (multi-part, series `NLB-CWOS-001`+) | NLB-29 | Complete (2 parts) |
 | 30 | Communication & Personal Information OS (CPIOS) (multi-part, series `NLB-CPIOS-001`+) | NLB-30 | Complete (2 parts) |
 | 31 | Knowledge, Research & Personal Intelligence OS (KROS) (multi-part, series `NLB-KROS-001`+) | NLB-31 | Complete (14 parts) |
-| 32 | Autonomous Execution & Action Orchestration System (AEAOS) (multi-part, series `NLB-AEAOS-001`+) | NLB-32 | In Progress (2 parts written) |
+| 32 | Autonomous Execution & Action Orchestration System (AEAOS) (multi-part, series `NLB-AEAOS-001`+) | NLB-32 | In Progress (4 parts written) |
 | 33 | User Personas | NLB-33 | Planned |
 | 34 | Product Requirements (PRD) | NLB-34 | Planned |
 | 35 | Analytics & Insight Layer | NLB-35 | Planned |
