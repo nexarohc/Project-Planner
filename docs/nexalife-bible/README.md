@@ -6,7 +6,7 @@ The authoritative specification for NexaLife — an AI-powered Life Operating Sy
 
 | Volume | Title | Document | Status |
 | --- | --- | --- | --- |
-| 00 | Master Constitution | [NLB-00](./NLB-00-master-constitution.md) | Master Draft (v1.14) |
+| 00 | Master Constitution | [NLB-00](./NLB-00-master-constitution.md) | Master Draft (v1.15) |
 | 01 | Product Vision & Strategy | [NLB-01](./NLB-01-product-vision-and-strategy.md) | Draft (v1.0) |
 | 02 | Market Research & Competitor Analysis | [NLB-02](./NLB-02-market-research-and-competitor-analysis.md) | Master Draft (v1.0) |
 | 03 | Universal Life Domain Architecture (ULDA) | [NLB-03](./NLB-03-universal-life-domain-architecture.md) | Master Draft (v1.1) |
@@ -35,10 +35,11 @@ The authoritative specification for NexaLife — an AI-powered Life Operating Sy
 | 29 | Career, Work & Professional Growth OS (CWOS) | [planners/career-work-os/](./planners/career-work-os/) | **Complete** (2 parts) |
 | 30 | Communication & Personal Information OS (CPIOS) | [planners/communication-personal-info-os/](./planners/communication-personal-info-os/) | **Complete** (2 parts) |
 | 31 | Knowledge, Research & Personal Intelligence OS (KROS) | [planners/knowledge-research-os/](./planners/knowledge-research-os/) | **Complete** (14 parts) |
-| 32 | User Personas | — | Planned |
-| 33 | Product Requirements (PRD) | — | Planned |
-| 34 | Analytics & Insight Layer | — | Planned |
-| 35 | Platform Architecture & Infrastructure | — | Planned |
+| 32 | Autonomous Execution & Action Orchestration System (AEAOS) | [execution/](./execution/) | In Progress (2 parts) |
+| 33 | User Personas | — | Planned |
+| 34 | Product Requirements (PRD) | — | Planned |
+| 35 | Analytics & Insight Layer | — | Planned |
+| 36 | Platform Architecture & Infrastructure | — | Planned |
 
 See `NLB-00` Article VIII for the full roadmap and the rationale behind the current ordering, and Article VII for documentation standards (ID scheme, versioning, status lifecycle, amendment process — including the `NLB-<XX>-NNN` scheme multi-part series use for their own parts).
 
@@ -58,6 +59,7 @@ Some volumes are big enough to need their own numbered series rather than a sing
 | `NLB-FWOS-*` | Finance, Wealth & Financial Freedom OS — cash flow, budgeting, debt, investing, business finance, wealth architecture | [planners/finance-wealth-os/](./planners/finance-wealth-os/) | 001–002 (complete) |
 | `NLB-CWOS-*` | Career, Work & Professional Growth OS — career strategy, jobs, freelance, leadership, entrepreneurship | [planners/career-work-os/](./planners/career-work-os/) | 001–002 (complete) |
 | `NLB-CPIOS-*` | Communication & Personal Information OS — unified inbox, agents, automation safety, personal data vault, digital identity | [planners/communication-personal-info-os/](./planners/communication-personal-info-os/) | 001–002 (complete) |
+| `NLB-AEAOS-*` | Autonomous Execution & Action Orchestration System — execution runtime, action integrity, multi-agent runtime, agent security | [execution/](./execution/) | 001–002 (in progress) |
 | `NLB-KROS-*` | Knowledge, Research & Personal Intelligence OS — research methodology, verification, knowledge workspace, agentic pipelines, security, reasoning tools | [planners/knowledge-research-os/](./planners/knowledge-research-os/) | 001–014 (complete) |
 
 **Scope boundaries between planner bibles.** HealthOS owns whole-person wellbeing; FPOS owns training and competition (and is the sport-specific implementation of `NLB-14`'s competition framework, not a second one); BLOS is the full product specification of the Bucket List Platform capability `NLB-14` established; RSOS owns relationships and communication; FWOS owns money, and connects to BLOS so savings become experiences; CPIOS owns communication as a system where RSOS owns it as relationship context; KROS owns research methodology, deferring student learning mechanics to the Study Planner and the knowledge graph itself to NXOS. Each bible's README states its boundary explicitly.
@@ -74,7 +76,7 @@ Future planner bibles (Career, Business, Travel, and so on) will follow the same
 6. **Growth & community** — `NLB-13` (Marketplace), `NLB-14` (Community, Competitions & Achievement)
 7. **The authoring standard** — `NLB-15` (MPSS): the template every individual planner bible must follow
 8. **Individual planner bibles** — Study Planner (16), HealthOS (24), FPOS (25), BLOS (26), RSOS (27), FWOS (28), each its own multi-part series
-9. **Everything after** — personas, requirements, analytics, and infrastructure, per the Volume 32–35 roadmap above
+9. **Everything after** — personas, requirements, analytics, and infrastructure, per the Volume 33–36 roadmap above
 
 ## Amending a volume
 
