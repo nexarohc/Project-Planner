@@ -140,5 +140,3 @@ Part 4 is architecturally complete when it supports: the event path (normalizati
 ---
 
 **End of Part 4 (Version 1.0)**
-
-**END OF THE AUTONOMOUS EXECUTION & ACTION ORCHESTRATION SPECIFICATION (parts 1–4)**
